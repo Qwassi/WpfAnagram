@@ -5,8 +5,77 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anagram"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="480" Width="640" Background="Black">
+    <Border Padding="10">
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
 
-    </Grid>
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="String to be anagrammed"
+                               Foreground="White"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="0 0 0 0">
+                    <TextBox x:Name="StringToBeAnagrammed" 
+                             VerticalAlignment="Center"
+                             Padding="3"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Margin="0 15 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="String to be compared"
+                               Foreground="White"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="0 0 0 0">
+                    <TextBox x:Name="StringToBeCompared" 
+                             VerticalAlignment="Center"
+                             Padding="3"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Margin="0 15 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <Button x:Name="FindAnagram"
+                            HorizontalAlignment="Left"
+                            Width="90"
+                            Background="White"
+                            Click="FindAnagram_Click">Find Anagram</Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid Margin="0 30 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock x:Name="Result"
+                               Foreground="White">
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+
+        </StackPanel>
+    </Border>
+
+
+
+
+
+
 </Window>

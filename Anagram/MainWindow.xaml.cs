@@ -24,5 +24,15 @@ namespace Anagram
         {
             InitializeComponent();
         }
+
+        private void FindAnagram_Click(object sender, RoutedEventArgs e)
+        {
+            bool isAnagram = false;
+
+            isAnagram = Util.Anagram.AnagramStrStr(StringToBeAnagrammed.Text, StringToBeCompared.Text);
+
+            Result.Text = isAnagram ? "Anagram of " + StringToBeAnagrammed.Text + " exists in " + StringToBeCompared.Text
+                : "Anagram of " + StringToBeAnagrammed.Text + " does not exist in " + StringToBeCompared.Text;
+        }
     }
 }
